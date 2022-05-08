@@ -1,6 +1,6 @@
 {
   "name": "wechaty-actor",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Wechaty Actor Model, Powered by XState, Mailbox, and CQRS",
   "type": "module",
   "exports": {
