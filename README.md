@@ -14,12 +14,15 @@ that applies the Actor Model with XState and CQRS.
 
 ![Actors](docs/images/actor.webp)
 
-> The Actor Model is a computational model for designing concurrent, distributed systems around the principal of self-contained Actors which operate on sending and receiving messages.  
+> The Actor Model is a computational model for designing concurrent,
+  distributed systems around the principal of self-contained Actors
+  which operate on sending and receiving messages.  
 > &mdash; [Introduction to the Actor Model...](https://medium.com/xandr-tech/introduction-to-the-actor-model-for-concurrent-computation-56c0391f8f92)
 
 ## Features
 
-1. Working with [wechaty-cqrs](https://github.com/wechaty/cqrs) by receiving the CQRS Commands and Queries, and responding Responses.
+1. Working with [wechaty-cqrs](https://github.com/wechaty/cqrs) by receiving
+  the CQRS Commands and Queries, and responding Responses.
 2. Implemented with [XState](https://xstate.js.org/) and [Mailbox](https://github.com/huan/mailbox)
 3. Native designed for Domain Driven Design (DDD)
 
@@ -72,7 +75,10 @@ Read Wechaty Actor API Reference at: <https://paka.dev/npm/wechaty-actor>
 
 - [The actor model in 10 minutes](https://www.brianstorti.com/the-actor-model/)
 - [Node.js actor framework](https://github.com/untu/comedy)
-- [Beautiful State Machines](https://xstate-catalogue.com/) - XState Catalogue is a collection of professionally designed state machines you can drop into your projects. Get started by browsing the catalogue, interacting with the machines, and copying the code.
+- [Beautiful State Machines](https://xstate-catalogue.com/) - XState Catalogue is
+  a collection of professionally designed state machines you can drop into your projects.
+  Get started by browsing the catalogue, interacting with the machines,
+  and copying the code.
 - [XState: Should this be an action or a service?](https://dev.to/mpocock1/xstate-should-this-be-an-action-or-a-service-2cp0)
 - [Introduction to the Actor Model for Concurrent Computation, John Murray, Sep 29, 2015, Tech Talks @ AppNexus](https://www.youtube.com/watch?v=lPTqcecwkJg)
 - [Kotlin Concurrency with Actors, Jag Saund, Jun 14, 2018](https://medium.com/@jagsaund/kotlin-concurrency-with-actors-34bd12531182)
@@ -88,11 +94,14 @@ Read Wechaty Actor API Reference at: <https://paka.dev/npm/wechaty-actor>
 
 ## Author
 
-[Huan LI](http://linkedin.com/in/zixia) is a serial entrepreneur, active angel investor with strong technology background.
-Huan is a widely recognized technical leader on conversational AI and open source cloud architectures.
+[Huan LI](http://linkedin.com/in/zixia) is a serial entrepreneur,
+active angel investor with strong technology background.
+Huan is a widely recognized technical leader on conversational AI
+and open source cloud architectures.
 He co-authored guide books "Chatbot 0 to 1" and "Concise Handbook of TensorFlow 2"
 and has been recognized both by Microsoft and Google as MVP/GDE.
-Huan is a Chatbot Architect and speaks regularly at technical conferences around the world.
+Huan is a Chatbot Architect and speaks regularly
+at technical conferences around the world.
 Find out more about his work at <https://github.com/huan>
 
 ## Copyright & License
