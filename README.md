@@ -43,13 +43,36 @@ import * as ACTOR   from 'wechaty-actor'
 import * as CQRS    from 'wechaty-cqrs'
 import * as WECHATY from 'wechaty'
 
-const wechaty = WECHATY.WechatyBuilder.build()
+const wechaty = WechatyBuilder.build()
 await wechaty.init()
 
-const bus$ = CQRS.from(wechaty)
-const actor = ACTOR.from(bus$)
+const actor = ACTOR.from(wechaty)
 
-actor.send(CQRS.commands.StartCommand(wechaty.puppet.id))
+const BOT_ID = 'BotMachine'
+const botMachine = createMachine({
+  id: BOT_ID,
+  on: {
+    '*': {
+      actions: Mailbox.actions.proxy(BOT_ID)(actor),
+    },
+  },
+})
+
+const interpreter = interpret(botMachine)
+  .onEvent(e => console.info(e))
+  .start()
+
+const startCommand = CQRS.commands.StartCommand(wechaty.puppet.id)
+interpreter.send(startCommand)
+
+const dingCommand  = CQRS.commands.DingCommand(wechaty.puppet.id)
+interpreter.send(dingCommand)
+
+await firstValueFrom(from(actor).pipe(
+  // filter(CQRS.is(CQRS.events.DongReceivedEvent)),
+  filter(CQRS.is(CQRS.responses.DingCommandResponse)),
+  take(1),
+))
 ```
 
 Learn how to build a Ding Dong BOT with Actor from our [examples/ding-dong-bot.ts](https://github.com/wechaty/actor/blob/main/examples/ding-dong-bot.ts)
