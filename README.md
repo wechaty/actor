@@ -9,6 +9,8 @@ Wechaty Actor Model, Powered by XState, Mailbox, and CQRS
 
 ![Wechaty Actor](docs/images/wechaty-acotr.webp)
 
+> Image source: [RoPA](https://ropa.umb.edu/coordinating-logistics)
+
 Wechaty Actor is an wrapper for Wechaty
 that applies the Actor Model with XState and CQRS.
 
