@@ -7,6 +7,8 @@ Wechaty Actor Model, Powered by XState, Mailbox, and CQRS
 [![Mailbox.Duckula Specification](https://img.shields.io/badge/Specification-Mailbox.Duckula-blueviolet)](https://github.com/huan/mailbox#duckula-specification)
 [![ES Modules](https://img.shields.io/badge/ES-Modules-brightgreen)](https://github.com/Chatie/tsconfig/issues/16)
 
+![Wechaty Actor](docs/images/wechaty-acotr.webp)
+
 Wechaty Actor is an wrapper for Wechaty
 that applies the Actor Model with XState and CQRS.
 
